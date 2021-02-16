@@ -9,7 +9,7 @@ This is a port of the Hugo theme [Anubis](https://github.com/Mitrichius/hugo-the
 In order to use the theme you need to clone this repository in your `themes` folder and set your theme setting in `config.toml` to `anpu`. Like this
 
 ```toml
-theme = "anpu"
+theme = "anpu-zola-theme"
 ```
 
 This theme requires both the `tags` and `categories` taxonomies.
