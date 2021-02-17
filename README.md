@@ -15,7 +15,7 @@ git clone https://github.com/zbrox/anpu-zola-theme.git themes/anpu
 Then set your theme setting in `config.toml` to `anpu`:
 
 ```toml
-theme = "anpu"
+theme = "anpu-zola-theme"
 ```
 
 This theme requires both the `tags` and `categories` taxonomies.
