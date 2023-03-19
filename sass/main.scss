@@ -1,5 +1,9 @@
 /* Basic */
-@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+@font-face {
+    font-family: 'Montserrat';
+    src: local("Montserrat"), url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
+}
+
 html {
     font-family: -apple-system, BlinkMacSystemFont, 'Montserrat', 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     /* 1 */
