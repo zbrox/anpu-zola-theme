@@ -11,123 +11,131 @@ $tertiary-dark: #444444;
 $accent-dark: #959bf0;
 
 @mixin light-theme {
-  color: $foreground;
-  background-color: $background;
+    color: $foreground;
+    background-color: $background;
 
-  .secondary {
-    color: $secondary;
-  }
+    .themed-icon {
+        filter: invert(0);
+    }
 
-  a,
-  a:link,
-  a:visited {
-    color: $accent;
-  }
+    .secondary {
+        color: $secondary;
+    }
 
-  a:hover {
-    color: darken($accent, 30%);
-  }
+    a,
+    a:link,
+    a:visited {
+        color: $accent;
+    }
 
-  blockquote {
-    border-left: 2px solid $secondary;
-  }
+    a:hover {
+        color: darken($accent, 30%);
+    }
 
-  code {
-    background-color: $tertiary;
-  }
+    blockquote {
+        border-left: 2px solid $secondary;
+    }
 
-  pre code {
-    background-color: transparent;
-  }
+    code {
+        background-color: $tertiary;
+    }
 
-  .footnote-definition sup {
-    color: $secondary;
-  }
+    pre code {
+        background-color: transparent;
+    }
+
+    .footnote-definition sup {
+        color: $secondary;
+    }
 }
 
 @mixin dark-theme {
-  color: $foreground-dark;
-  background-color: $background-dark;
+    color: $foreground-dark;
+    background-color: $background-dark;
 
-  .secondary {
-    color: $secondary-dark;
-  }
+    .themed-icon {
+        filter: invert(1);
+    }
 
-  a,
-  a:link,
-  a:visited {
-    color: $accent-dark;
-  }
+    .secondary {
+        color: $secondary-dark;
+    }
 
-  a:hover {
-    color: lighten($accent-dark, 10%);
-  }
+    a,
+    a:link,
+    a:visited {
+        color: $accent-dark;
+    }
 
-  blockquote {
-    border-left: 2px solid $secondary-dark;
-  }
+    a:hover {
+        color: lighten($accent-dark, 10%);
+    }
 
-  code {
-    background-color: $tertiary-dark;
-  }
+    blockquote {
+        border-left: 2px solid $secondary-dark;
+    }
 
-  pre code {
-    background-color: transparent;
-  }
+    code {
+        background-color: $tertiary-dark;
+    }
 
-  .footnote-definition sup {
-    color: $secondary-dark;
-  }
+    pre code {
+        background-color: transparent;
+    }
+
+    .footnote-definition sup {
+        color: $secondary-dark;
+    }
 }
 
 @media (prefers-color-scheme: light) {
-  body {
-    @include light-theme;
-  }
+    body {
+        @include light-theme;
+    }
 }
 
 @media (prefers-color-scheme: dark) {
-  body {
-    @include dark-theme;
-  }
+    body {
+        @include dark-theme;
+    }
 }
 
 .dark-mode-buttons {
-  position: absolute;
+    position: absolute;
 
-  top: 1em;
-  right: 1em;
+    top: 1em;
+    right: 1em;
 }
 
 .dark-mode-button {
-  border: none;
-  background-color: transparent;
+    border: none;
+    background-color: transparent;
 
-  &:hover {
-    cursor: pointer;
-  }
+    &:hover {
+        cursor: pointer;
+    }
 }
 
 body:not(.dark-mode) {
-  @include light-theme;
+    @include light-theme;
 
-  #dark-mode-on {
-    display: inline;
-  }
+    #dark-mode-on {
+        display: inline;
+    }
 
-  #dark-mode-off {
-    display: none;
-  }
+    #dark-mode-off {
+        display: none;
+    }
 }
 
 body.dark-mode {
-  @include dark-theme;
+    @include dark-theme;
 
-  #dark-mode-on {
-    display: none;
-  }
+    #dark-mode-on {
+        display: none;
+    }
 
-  #dark-mode-off {
-    display: inline;
-  }
+    #dark-mode-off {
+        display: inline;
+    }
 }
