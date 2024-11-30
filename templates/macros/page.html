@@ -1,7 +1,7 @@
 {% macro page_info(page) %}
     <div class="article-info">
         {% if page.date %}
-        <div class="article-date">{{ page.date | date(format=config.extra.anpu_date_format) }}</div>
+        <time class="article-date" datetime="{{ page.date }}">{{ page.date | date(format=config.extra.anpu_date_format) }}</time>
         {% endif %}
         <div class="article-taxonomies">
             {% if page.taxonomies.categories %}
